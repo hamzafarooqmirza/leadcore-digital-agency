@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "sdk_version": "0.24.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "leadcore-digital-mcp",
+      "version": "0.1.0",
+      "title": "LeadCore Digital"
+    },
+    "tools": [
+      {
+        "name": "list_services",
+        "title": "List services",
+        "description": "List all digital marketing services offered by LeadCore Digital (Google Ads, SEO, Facebook Ads, web design, lead generation, etc.) with each service's slug, title, and short description.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_service",
+        "title": "Get service details",
+        "description": "Get details for a single LeadCore Digital service by its slug (e.g. 'google-ads-management', 'seo', 'facebook-ads-management').",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The service slug, e.g. 'google-ads-management'."
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_projects",
+        "title": "List client projects",
+        "description": "List LeadCore Digital's client project case studies with title, category, market, description, tags, and key performance metrics (conversions, impressions, CPC, spend).",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_agency_info",
+        "title": "Get agency info",
+        "description": "Get LeadCore Digital's core agency information: name, tagline, contact channels (phone, WhatsApp, email), location, and the list of industries served.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
