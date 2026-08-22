@@ -2,6 +2,7 @@ import { projects, type ProjectItem } from "@/lib/projects";
 import { ArrowRight, MapPin, Tag } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { whatsappUrl } from "@/lib/site";
+import { CampaignVisual } from "@/components/visuals/CampaignVisual";
 
 export function ProjectsGrid({ items = projects }: { items?: ProjectItem[] }) {
   return (
@@ -18,11 +19,9 @@ function ProjectCard({ project }: { project: ProjectItem }) {
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-[0_10px_40px_-15px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-[0_20px_60px_-15px_rgba(212,175,55,0.35)]">
       {/* Thumbnail — fixed aspect for equal card heights */}
       <div className="relative aspect-[16/9] w-full overflow-hidden bg-surface border-b border-border">
-        <img
-          src={project.image}
-          alt={project.title}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+        <CampaignVisual
+          seed={project.seed}
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
         />
         <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-background/85 backdrop-blur px-3 py-1 text-[11px] font-semibold text-gold border border-gold/30">
           <Tag className="h-3 w-3" /> {project.category}

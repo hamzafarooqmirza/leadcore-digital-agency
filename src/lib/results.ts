@@ -1,16 +1,5 @@
-import s164 from "@/assets/results/164_calls_single_day.png.asset.json";
-import s132 from "@/assets/results/132_budget_89calls.png.asset.json";
-import s71 from "@/assets/results/71calls_345gbp.png.asset.json";
-import s28 from "@/assets/results/28calls_just30gbp.png.asset.json";
-import s22 from "@/assets/results/22_calls.png.asset.json";
-import s18a from "@/assets/results/18_calls_88gbp.png.asset.json";
-import s18b from "@/assets/results/18_clicks_18_calls.png.asset.json";
-import s13 from "@/assets/results/13_clicks_13call_14pounds.png.asset.json";
-import gpt1 from "@/assets/results/ChatGPT_Image_Jun_1_2026_03_23_16_PM.png.asset.json";
-import gpt2 from "@/assets/results/ChatGPT_Image_May_24_2026_12_28_32_AM.png.asset.json";
-
 export type ResultItem = {
-  src: string;
+  seed: number;
   headline: string;
   metric: string;
   description: string;
@@ -19,7 +8,7 @@ export type ResultItem = {
 
 export const adsResults: ResultItem[] = [
   {
-    src: s164.url,
+    seed: 0,
     headline: "164 Phone Calls In A Single Day",
     metric: "164 Calls",
     description:
@@ -27,7 +16,7 @@ export const adsResults: ResultItem[] = [
     tags: ["Google Ads", "Call Campaign", "UK"],
   },
   {
-    src: s132.url,
+    seed: 1,
     headline: "89 Calls On Just £131 Budget",
     metric: "89 Calls",
     description:
@@ -35,7 +24,7 @@ export const adsResults: ResultItem[] = [
     tags: ["Lead Gen", "Call Ads", "Low CPC"],
   },
   {
-    src: s71.url,
+    seed: 2,
     headline: "71 Phone Calls In One Week",
     metric: "71 Calls / £345",
     description:
@@ -43,7 +32,7 @@ export const adsResults: ResultItem[] = [
     tags: ["Performance Max", "Lead Gen"],
   },
   {
-    src: s28.url,
+    seed: 3,
     headline: "28 Calls For Only £30.82",
     metric: "28 Calls / £30",
     description:
@@ -51,7 +40,7 @@ export const adsResults: ResultItem[] = [
     tags: ["Budget Friendly", "Call Generation"],
   },
   {
-    src: s22.url,
+    seed: 4,
     headline: "22 Calls From Tight Targeting",
     metric: "22 Calls",
     description:
@@ -59,7 +48,7 @@ export const adsResults: ResultItem[] = [
     tags: ["Local Services", "Geo Targeting"],
   },
   {
-    src: s18a.url,
+    seed: 5,
     headline: "18 Calls At Just £88 Spend",
     metric: "18 Calls / £88",
     description:
@@ -67,7 +56,7 @@ export const adsResults: ResultItem[] = [
     tags: ["Google Ads", "Search"],
   },
   {
-    src: s18b.url,
+    seed: 6,
     headline: "100% Click-To-Call Conversion",
     metric: "18 Clicks · 18 Calls",
     description:
@@ -75,7 +64,7 @@ export const adsResults: ResultItem[] = [
     tags: ["CTR", "Conversion Tracking"],
   },
   {
-    src: s13.url,
+    seed: 7,
     headline: "13 Calls From 13 Clicks · £14.77",
     metric: "13 Calls / £14",
     description:
@@ -83,5 +72,3 @@ export const adsResults: ResultItem[] = [
     tags: ["Call-Only Ads", "High Intent"],
   },
 ];
-
-export const dashboardScreens = [gpt1.url, gpt2.url];

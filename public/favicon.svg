@@ -1,11 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LeadCore Digital">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="LeadCore Digital">
   <defs>
-    <linearGradient id="background" x1="8" y1="56" x2="56" y2="8" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2563eb" />
-      <stop offset="1" stop-color="#06b6d4" />
+    <linearGradient id="bg" x1="4" y1="36" x2="36" y2="4" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1c1a14" />
+      <stop offset="1" stop-color="#0c0b09" />
+    </linearGradient>
+    <linearGradient id="gold" x1="10" y1="30" x2="30" y2="8" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f3dfa0" />
+      <stop offset="0.55" stop-color="#d4af37" />
+      <stop offset="1" stop-color="#a9781f" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#background)" />
-  <path d="M18 15v34h25v-8H27V15z" fill="#fff" />
-  <path d="m35 15 12 12-12 12v-8H24v-8h11z" fill="#dbeafe" />
+  <rect x="1" y="1" width="38" height="38" rx="10" fill="url(#bg)" />
+  <rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="url(#gold)" stroke-opacity="0.35" />
+  <path d="M13 27V14.5" stroke="url(#gold)" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M13 27h9.5" stroke="url(#gold)" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M13 22.5 20 16l4 4 6.5-7" fill="none" stroke="url(#gold)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M25 12.5h5.5V18" fill="none" stroke="url(#gold)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
 </svg>

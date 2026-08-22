@@ -37,8 +37,8 @@ function Projects() {
           Featured <span className="text-gradient-gold">Client Projects</span>
         </h1>
         <p className="mt-5 text-lg text-muted-foreground max-w-2xl">
-          A curated look at real campaigns we've built and scaled — every project below is a live
-          client account with verified performance data.
+          A curated look at real campaigns we've built and scaled — every project below reflects
+          live client account performance data.
         </p>
       </section>
 
