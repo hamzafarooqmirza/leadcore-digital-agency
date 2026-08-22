@@ -15,5 +15,14 @@ export default defineConfig({
   },
   vite: {
     plugins: [mcpPlugin()],
+    build: {
+      // @lovable.dev/mcp-js dynamically imports "cloudflare:workers" to read Cloudflare
+      // env bindings, with a try/catch fallback for non-Cloudflare runtimes. Rollup still
+      // tries to resolve it eagerly on non-Cloudflare deploy targets (e.g. Vercel), so mark
+      // it external — it's never bundled, only imported at runtime where it may not exist.
+      rollupOptions: {
+        external: ["cloudflare:workers"],
+      },
+    },
   },
 });
