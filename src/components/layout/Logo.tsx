@@ -1,10 +1,10 @@
-import logoAsset from "@/assets/leadcore-logo.png.asset.json";
 import { Link } from "@tanstack/react-router";
+import { LogoMark } from "@/components/layout/LogoMark";
 
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <Link to="/" className="flex items-center gap-3 group">
-      <img src={logoAsset.url} alt="LeadCore Digital logo" className="h-9 w-9 object-contain" />
+      <LogoMark className="h-9 w-9 shrink-0 transition-transform group-hover:scale-105" />
       {!compact && (
         <div className="leading-tight">
           <div className="font-display font-bold text-base tracking-tight">

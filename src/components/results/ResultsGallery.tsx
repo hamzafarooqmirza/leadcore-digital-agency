@@ -1,5 +1,6 @@
 import { adsResults, type ResultItem } from "@/lib/results";
 import { TrendingUp } from "lucide-react";
+import { CampaignVisual } from "@/components/visuals/CampaignVisual";
 
 export function ResultsGallery({
   items = adsResults,
@@ -17,7 +18,7 @@ export function ResultsGallery({
   return (
     <div className={`grid ${gridCols} gap-6`}>
       {items.map((r) => (
-        <ResultCard key={r.src} item={r} />
+        <ResultCard key={r.seed} item={r} />
       ))}
     </div>
   );
@@ -27,12 +28,7 @@ export function ResultCard({ item }: { item: ResultItem }) {
   return (
     <figure className="group card-elevated rounded-2xl overflow-hidden flex flex-col hover:border-gold/60 hover:-translate-y-0.5 transition">
       <div className="relative bg-surface border-b border-border p-3 flex items-center justify-center">
-        <img
-          src={item.src}
-          alt={item.headline}
-          loading="lazy"
-          className="max-h-[420px] w-full h-auto object-contain"
-        />
+        <CampaignVisual seed={item.seed} className="w-full h-auto max-h-[420px]" />
         <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-background/85 backdrop-blur px-3 py-1 text-xs font-semibold text-gold border border-gold/30">
           <TrendingUp className="h-3 w-3" /> {item.metric}
         </div>
