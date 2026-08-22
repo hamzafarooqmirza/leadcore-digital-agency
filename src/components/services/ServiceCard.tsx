@@ -24,7 +24,9 @@ export function ServiceCard({ slug, title, short }: Props) {
       </div>
 
       {/* Decorative gradient backdrop */}
-      <div className={`pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full bg-gradient-to-br ${tint} blur-2xl opacity-70 group-hover:opacity-100 transition-opacity`} />
+      <div
+        className={`pointer-events-none absolute -top-16 -right-16 h-44 w-44 rounded-full bg-gradient-to-br ${tint} blur-2xl opacity-70 group-hover:opacity-100 transition-opacity`}
+      />
 
       {/* Subtle grid pattern */}
       <div

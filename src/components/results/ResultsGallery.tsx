@@ -9,7 +9,11 @@ export function ResultsGallery({
   columns?: 2 | 3 | 4;
 }) {
   const gridCols =
-    columns === 2 ? "md:grid-cols-2" : columns === 4 ? "md:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-2 lg:grid-cols-3";
+    columns === 2
+      ? "md:grid-cols-2"
+      : columns === 4
+        ? "md:grid-cols-2 lg:grid-cols-4"
+        : "md:grid-cols-2 lg:grid-cols-3";
   return (
     <div className={`grid ${gridCols} gap-6`}>
       {items.map((r) => (
@@ -38,7 +42,10 @@ export function ResultCard({ item }: { item: ResultItem }) {
         <p className="mt-2 text-sm text-muted-foreground flex-1">{item.description}</p>
         <div className="mt-4 flex flex-wrap gap-1.5">
           {item.tags.map((t) => (
-            <span key={t} className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-[11px] text-muted-foreground">
+            <span
+              key={t}
+              className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-[11px] text-muted-foreground"
+            >
               {t}
             </span>
           ))}

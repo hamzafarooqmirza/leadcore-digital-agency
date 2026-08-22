@@ -37,9 +37,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
         <h3 className="mt-2 font-display text-lg font-semibold leading-snug min-h-[3.5rem]">
           {project.title}
         </h3>
-        <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          {project.description}
-        </p>
+        <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{project.description}</p>
 
         {/* Metrics */}
         <div className="mt-5 grid grid-cols-2 gap-2">
@@ -51,9 +49,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
               <div className="text-[10px] uppercase tracking-wider text-muted-foreground">
                 {m.label}
               </div>
-              <div className="mt-0.5 font-display text-base font-bold text-gold">
-                {m.value}
-              </div>
+              <div className="mt-0.5 font-display text-base font-bold text-gold">{m.value}</div>
             </div>
           ))}
         </div>

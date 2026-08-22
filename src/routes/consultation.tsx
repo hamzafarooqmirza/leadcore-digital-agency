@@ -181,10 +181,14 @@ function ConsultationPage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
-        <div className="absolute inset-0 pointer-events-none" aria-hidden style={{
-          background:
-            "radial-gradient(60% 40% at 50% 0%, color-mix(in oklab, var(--gold) 18%, transparent), transparent 70%)",
-        }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden
+          style={{
+            background:
+              "radial-gradient(60% 40% at 50% 0%, color-mix(in oklab, var(--gold) 18%, transparent), transparent 70%)",
+          }}
+        />
         <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 pt-20 sm:pt-24 pb-10 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-[11px] uppercase tracking-[0.18em] text-gold font-semibold">
             <Sparkles className="h-3.5 w-3.5" /> Free Consultation
@@ -193,8 +197,8 @@ function ConsultationPage() {
             Let's Grow Your <span className="text-gradient-gold">Business Together</span>
           </h1>
           <p className="mt-5 mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground">
-            Tell us about your business and marketing goals. Complete the form below and our
-            team will contact you within 24 hours with a customised strategy.
+            Tell us about your business and marketing goals. Complete the form below and our team
+            will contact you within 24 hours with a customised strategy.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {TRUST_BADGES.map(({ icon: I, label }) => (
@@ -224,10 +228,18 @@ function ConsultationPage() {
                 We have received your enquiry and will contact you within 24 hours.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a href={whatsappUrl()} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-gold-foreground">
+                <a
+                  href={whatsappUrl()}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-gold-foreground"
+                >
                   <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
                 </a>
-                <a href={`tel:${site.phoneRaw}`} className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold">
+                <a
+                  href={`tel:${site.phoneRaw}`}
+                  className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold"
+                >
                   <Phone className="h-4 w-4" /> Call {site.phone}
                 </a>
               </div>
@@ -242,10 +254,21 @@ function ConsultationPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <Field name="name" label="Full Name" required />
                   <Field name="email" label="Business Email" type="email" required />
-                  <Field name="phone" label="Phone (with Country Code)" type="tel" placeholder="+44 ..." required />
+                  <Field
+                    name="phone"
+                    label="Phone (with Country Code)"
+                    type="tel"
+                    placeholder="+44 ..."
+                    required
+                  />
                   <Field name="company" label="Company Name" />
                   <div className="sm:col-span-2">
-                    <Field name="website" label="Website URL (Optional)" type="url" placeholder="https://" />
+                    <Field
+                      name="website"
+                      label="Website URL (Optional)"
+                      type="url"
+                      placeholder="https://"
+                    />
                   </div>
                 </div>
               </FormSection>
@@ -310,7 +333,9 @@ function ConsultationPage() {
                           : "border-border bg-surface/60 hover:border-gold/40"
                       }`}
                     >
-                      <span className={`h-2 w-2 rounded-full ${contactMethod === m ? "bg-gold-foreground" : "bg-muted-foreground"}`} />
+                      <span
+                        className={`h-2 w-2 rounded-full ${contactMethod === m ? "bg-gold-foreground" : "bg-muted-foreground"}`}
+                      />
                       {m}
                     </button>
                   ))}
@@ -325,11 +350,17 @@ function ConsultationPage() {
               </FormSection>
 
               {/* Upload */}
-              <FormSection title="Upload Files (Optional)" step="08" hint="Logo, website screenshot, marketing report — max 5 files">
+              <FormSection
+                title="Upload Files (Optional)"
+                step="08"
+                hint="Logo, website screenshot, marketing report — max 5 files"
+              >
                 <label className="flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-border hover:border-gold/50 bg-background/40 px-6 py-8 cursor-pointer transition">
                   <Upload className="h-6 w-6 text-gold" />
                   <span className="text-sm font-medium">Click to upload or drag files</span>
-                  <span className="text-xs text-muted-foreground">PNG, JPG, PDF · up to 5 files</span>
+                  <span className="text-xs text-muted-foreground">
+                    PNG, JPG, PDF · up to 5 files
+                  </span>
                   <input
                     type="file"
                     multiple
@@ -342,9 +373,16 @@ function ConsultationPage() {
                 {files.length > 0 && (
                   <ul className="mt-4 grid gap-2">
                     {files.map((f, i) => (
-                      <li key={i} className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface/60 px-3 py-2 text-sm">
+                      <li
+                        key={i}
+                        className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface/60 px-3 py-2 text-sm"
+                      >
                         <span className="truncate">{f.name}</span>
-                        <button type="button" onClick={() => removeFile(i)} className="text-muted-foreground hover:text-destructive">
+                        <button
+                          type="button"
+                          onClick={() => removeFile(i)}
+                          className="text-muted-foreground hover:text-destructive"
+                        >
                           <X className="h-4 w-4" />
                         </button>
                       </li>
@@ -356,9 +394,15 @@ function ConsultationPage() {
               {/* Consent + submit */}
               <div className="space-y-5 pt-2">
                 <label className="flex items-start gap-3 text-sm">
-                  <input type="checkbox" name="consent" required className="mt-0.5 h-4 w-4 accent-[color:var(--gold)]" />
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    required
+                    className="mt-0.5 h-4 w-4 accent-[color:var(--gold)]"
+                  />
                   <span className="text-muted-foreground">
-                    I agree to the Privacy Policy and consent to being contacted regarding my enquiry.
+                    I agree to the Privacy Policy and consent to being contacted regarding my
+                    enquiry.
                   </span>
                 </label>
 
@@ -385,7 +429,9 @@ function ConsultationPage() {
         {/* Side panel */}
         <aside className="space-y-5 lg:sticky lg:top-24 self-start">
           <div className="rounded-3xl border border-border/70 bg-surface/50 backdrop-blur-xl p-6">
-            <h3 className="font-display text-lg font-bold">Why Businesses Choose LeadCore Digital</h3>
+            <h3 className="font-display text-lg font-bold">
+              Why Businesses Choose LeadCore Digital
+            </h3>
             <ul className="mt-4 space-y-2.5">
               {WHY_US.map((w) => (
                 <li key={w} className="flex items-center gap-2.5 text-sm">
@@ -414,17 +460,28 @@ function ConsultationPage() {
             <h3 className="font-display text-lg font-bold">Contact Information</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href={whatsappUrl()} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-gold">
+                <a
+                  href={whatsappUrl()}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3 hover:text-gold"
+                >
                   <MessageCircle className="h-4 w-4 text-gold" /> WhatsApp
                 </a>
               </li>
               <li>
-                <a href={`tel:${site.phoneRaw}`} className="flex items-center gap-3 hover:text-gold">
+                <a
+                  href={`tel:${site.phoneRaw}`}
+                  className="flex items-center gap-3 hover:text-gold"
+                >
                   <Phone className="h-4 w-4 text-gold" /> {site.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="flex items-center gap-3 hover:text-gold break-all">
+                <a
+                  href={`mailto:${site.email}`}
+                  className="flex items-center gap-3 hover:text-gold break-all"
+                >
                   <Mail className="h-4 w-4 text-gold shrink-0" /> {site.email}
                 </a>
               </li>
@@ -573,9 +630,7 @@ function MultiSelect({
   }, [open]);
 
   const toggle = (val: string) => {
-    const next = selected.includes(val)
-      ? selected.filter((s) => s !== val)
-      : [...selected, val];
+    const next = selected.includes(val) ? selected.filter((s) => s !== val) : [...selected, val];
     onChange(next);
     if (!selected.includes(val) && next.length <= 999) {
       // collapse after each selection per spec
@@ -601,7 +656,9 @@ function MultiSelect({
           open ? "border-gold" : "border-border hover:border-gold/40"
         }`}
       >
-        <span className={`truncate ${selected.length === 0 ? "text-muted-foreground" : "text-foreground"}`}>
+        <span
+          className={`truncate ${selected.length === 0 ? "text-muted-foreground" : "text-foreground"}`}
+        >
           {display}
         </span>
         <ChevronDown
@@ -611,7 +668,9 @@ function MultiSelect({
 
       <div
         className={`absolute z-30 left-0 right-0 mt-2 origin-top rounded-2xl border border-gold/25 bg-surface/95 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden transition duration-200 ${
-          open ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"
+          open
+            ? "opacity-100 scale-100 pointer-events-auto"
+            : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
         <ul role="listbox" className="max-h-72 overflow-y-auto py-2">
@@ -625,7 +684,9 @@ function MultiSelect({
                   aria-selected={active}
                   onClick={() => toggle(opt)}
                   className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left transition ${
-                    active ? "bg-gold/10 text-foreground" : "text-muted-foreground hover:bg-gold/5 hover:text-foreground"
+                    active
+                      ? "bg-gold/10 text-foreground"
+                      : "text-muted-foreground hover:bg-gold/5 hover:text-foreground"
                   }`}
                 >
                   <span
