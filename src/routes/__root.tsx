@@ -78,23 +78,52 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "LeadCore Digital — Your Growth Partner In Digital Marketing" },
-      { name: "description", content: "LeadCore Digital is a results-driven digital marketing agency specializing in Google Ads, SEO, web design, lead generation and conversion tracking." },
+      {
+        name: "description",
+        content:
+          "LeadCore Digital is a results-driven digital marketing agency specializing in Google Ads, SEO, web design, lead generation and conversion tracking.",
+      },
       { name: "author", content: "LeadCore Digital" },
       { property: "og:site_name", content: "LeadCore Digital" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:title", content: "LeadCore Digital — Your Growth Partner In Digital Marketing" },
-      { name: "twitter:title", content: "LeadCore Digital — Your Growth Partner In Digital Marketing" },
-      { property: "og:description", content: "LeadCore Digital is a results-driven digital marketing agency specializing in Google Ads, SEO, web design, lead generation and conversion tracking." },
-      { name: "twitter:description", content: "LeadCore Digital is a results-driven digital marketing agency specializing in Google Ads, SEO, web design, lead generation and conversion tracking." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a7ab7e-94a6-483d-96a0-25a2a987fd0f/id-preview-f4cae8b4--8e0803cc-d7d7-4eaf-aa51-efda89cff5f4.lovable.app-1780311870031.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a7ab7e-94a6-483d-96a0-25a2a987fd0f/id-preview-f4cae8b4--8e0803cc-d7d7-4eaf-aa51-efda89cff5f4.lovable.app-1780311870031.png" },
+      {
+        property: "og:title",
+        content: "LeadCore Digital — Your Growth Partner In Digital Marketing",
+      },
+      {
+        name: "twitter:title",
+        content: "LeadCore Digital — Your Growth Partner In Digital Marketing",
+      },
+      {
+        property: "og:description",
+        content:
+          "LeadCore Digital is a results-driven digital marketing agency specializing in Google Ads, SEO, web design, lead generation and conversion tracking.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "LeadCore Digital is a results-driven digital marketing agency specializing in Google Ads, SEO, web design, lead generation and conversion tracking.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a7ab7e-94a6-483d-96a0-25a2a987fd0f/id-preview-f4cae8b4--8e0803cc-d7d7-4eaf-aa51-efda89cff5f4.lovable.app-1780311870031.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a7ab7e-94a6-483d-96a0-25a2a987fd0f/id-preview-f4cae8b4--8e0803cc-d7d7-4eaf-aa51-efda89cff5f4.lovable.app-1780311870031.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+      },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
     ],
   }),

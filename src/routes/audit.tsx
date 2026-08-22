@@ -8,9 +8,16 @@ export const Route = createFileRoute("/audit")({
   head: () => ({
     meta: [
       { title: "Get Your Free Digital Marketing Audit | LeadCore Digital" },
-      { name: "description", content: "Free Google Ads, SEO, website, conversion tracking and lead generation audit from LeadCore Digital. No obligation. Real insights." },
+      {
+        name: "description",
+        content:
+          "Free Google Ads, SEO, website, conversion tracking and lead generation audit from LeadCore Digital. No obligation. Real insights.",
+      },
       { property: "og:title", content: "Free Digital Marketing Audit | LeadCore Digital" },
-      { property: "og:description", content: "Get a free professional audit of your marketing — no obligation." },
+      {
+        property: "og:description",
+        content: "Get a free professional audit of your marketing — no obligation.",
+      },
       { property: "og:url", content: "/audit" },
     ],
     links: [{ rel: "canonical", href: "/audit" }],
@@ -42,12 +49,15 @@ function Audit() {
     <SiteShell>
       <section className="container mx-auto max-w-6xl px-4 sm:px-6 pt-20 pb-20 grid lg:grid-cols-2 gap-12">
         <div>
-          <span className="text-xs uppercase tracking-[0.18em] text-gold font-semibold">Free Audit</span>
+          <span className="text-xs uppercase tracking-[0.18em] text-gold font-semibold">
+            Free Audit
+          </span>
           <h1 className="mt-3 font-display text-4xl sm:text-5xl font-bold leading-tight">
             Get Your Free <span className="text-gradient-gold">Digital Marketing Audit</span>
           </h1>
           <p className="mt-5 text-lg text-muted-foreground">
-            We'll review your current marketing setup and deliver a detailed action plan — no cost, no obligation.
+            We'll review your current marketing setup and deliver a detailed action plan — no cost,
+            no obligation.
           </p>
           <ul className="mt-8 space-y-3">
             {audits.map((a) => (
@@ -73,19 +83,38 @@ function Audit() {
             Request Free Audit <ArrowRight className="h-4 w-4" />
           </button>
           {submitted && (
-            <p className="text-xs text-emerald-400 text-center">Opening WhatsApp — we'll respond within hours.</p>
+            <p className="text-xs text-emerald-400 text-center">
+              Opening WhatsApp — we'll respond within hours.
+            </p>
           )}
-          <p className="text-xs text-muted-foreground text-center">We respect your privacy. No spam, ever.</p>
+          <p className="text-xs text-muted-foreground text-center">
+            We respect your privacy. No spam, ever.
+          </p>
         </form>
       </section>
     </SiteShell>
   );
 }
 
-function Field({ name, label, type = "text", required, placeholder }: { name: string; label: string; type?: string; required?: boolean; placeholder?: string }) {
+function Field({
+  name,
+  label,
+  type = "text",
+  required,
+  placeholder,
+}: {
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  placeholder?: string;
+}) {
   return (
     <label className="block">
-      <span className="text-xs uppercase tracking-wider text-muted-foreground">{label}{required && " *"}</span>
+      <span className="text-xs uppercase tracking-wider text-muted-foreground">
+        {label}
+        {required && " *"}
+      </span>
       <input
         name={name}
         type={type}

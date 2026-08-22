@@ -35,7 +35,10 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href={`tel:${site.phoneRaw}`} className="text-sm text-muted-foreground hover:text-gold flex items-center gap-2">
+          <a
+            href={`tel:${site.phoneRaw}`}
+            className="text-sm text-muted-foreground hover:text-gold flex items-center gap-2"
+          >
             <Phone className="h-4 w-4" /> {site.phone}
           </a>
           <Link

@@ -15,7 +15,12 @@ export default defineTool({
     const svc = services.find((s) => s.slug === slug);
     if (!svc) {
       return {
-        content: [{ type: "text", text: `No service found with slug "${slug}". Use list_services to see available slugs.` }],
+        content: [
+          {
+            type: "text",
+            text: `No service found with slug "${slug}". Use list_services to see available slugs.`,
+          },
+        ],
         isError: true,
       };
     }
